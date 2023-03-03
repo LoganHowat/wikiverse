@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import apiURL from '../api';
+import '../../style.css';
 
 
 export const AddArticle = ({setAddArticle}) => {
@@ -49,12 +50,15 @@ export const AddArticle = ({setAddArticle}) => {
         setTags(event.target.value)
     }
 
-	return <form onSubmit={handleSubmit}>
-        <input type='text' placeholder='Title' onChange={handleTitle}/><br></br>
-        <input type='text' placeholder='Content' onChange={handleContent}/><br></br>
-        <input type='text' placeholder='Name' onChange={handleName}/><br></br>
-        <input type='text' placeholder='Email' onChange={handleEmail}/><br></br>
-        <input type='text' placeholder='Tags' onChange={handleTags}/><br></br>
-        <button type='submit'>Create Page</button>
-	</form>
+	return <div>
+        <h2>Add a Page</h2><br/>
+        <form onSubmit={handleSubmit}>
+            <input type='text' placeholder='Title' onChange={handleTitle}/><br></br>
+            <input type='text' placeholder='Content' onChange={handleContent}/><br></br>
+            <input type='text' placeholder='Name' onChange={handleName}/><br></br>
+            <input type='text' placeholder='Email' onChange={handleEmail}/><br></br>
+            <input type='text' placeholder='Tags' onChange={handleTags}/><br></br>
+            <br/><button type='submit' id='add'>Create Page</button>
+	    </form>
+    </div>
 } 
